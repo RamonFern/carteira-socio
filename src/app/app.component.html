@@ -1,0 +1,172 @@
+<div class="main-principal">
+  <header>
+    <h2>INFORME OS DADOS</h2>
+  </header>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" >
+    <div class="card">
+      <!-- <mat-card> -->
+        <mat-form-field appearance="outline">
+          <mat-label>Nome</mat-label>
+          <input matInput placeholder="Maria Aparecida" formControlName="nome">
+        </mat-form-field>
+        <mat-label>Matricula</mat-label>
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="454" formControlName="matricula">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Profissional</mat-label>
+          <input matInput placeholder="sim ou não" formControlName="profissional">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Amador</mat-label>
+          <input matInput placeholder="sim ou não" formControlName="amador">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Data Colonização</mat-label>
+          <input matInput placeholder="12/03/2023" formControlName="dataColonia">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Data Emissão</mat-label>
+          <input matInput placeholder="12/07/2023" formControlName="dataEmissao">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Filiação</mat-label>
+          <input matInput placeholder="Raimundo Nonato" formControlName="pais">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Data Nascimento</mat-label>
+          <input matInput placeholder="23/07/2023" formControlName="dataNascimento">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Estado Civil</mat-label>
+          <input matInput placeholder="Casado" formControlName="estadoCivil">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>RG</mat-label>
+          <input matInput placeholder="1223234-32" formControlName="rg">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>CPF</mat-label>
+          <input matInput placeholder="233.344.454-23" formControlName="cpf">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Cart Cap.</mat-label>
+          <input matInput placeholder="344444" formControlName="cartCap">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Naturalidade</mat-label>
+          <input matInput placeholder="São Luis" formControlName="naturalidade">
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit">Enviar</button>
+      <!-- </mat-card> -->
+    </div>
+  </form>
+</div>
+
+<!-- carteira -->
+<div class="main" id="content" #content>
+  <div class="main__esq">
+    <div class="header">
+      <div class="imagem-esq">
+        <img src="/assets/images/patriadever.jpg" alt="Imagem do patria e dever" class="imagem">
+      </div>
+      <div class="header__centro">
+        <span class="titulo">COLÔNIA DE PESCADORES Z-19 DE ICATU-MA</span>
+        <span class="sub-titulo">Federação das colônias de pescadores do Estado do Maranhão</span>
+        <span class="fund">Fundada: 01/03/1982 cnpj: 07.004.369/0001-11</span>
+        <span class="fund">PATRONO: "DUQUE DE CAXIAS"</span>
+      </div>
+      <div class="imagem-dir">
+        <img src="/assets/images/fish.jpg" alt="Imagem do peixe" class="imagem">
+      </div>
+    </div>
+    <div class="socio">
+      <span class="cart-socio">CARTEIRA DE SÓCIO</span>
+    </div>
+    <div class="nome">
+      <div class="nome__box"><span>Nome</span></div>
+      <div class="nome__input"><span>{{ nome }}</span></div>
+    </div>
+    <div class="matricula">
+      <div class="matricula__box"><span>Matricula</span></div>
+      <div class="matricula__input">
+        <span class="input_mat">{{ matricula }}</span>
+      </div>
+    </div>
+    <div class="prof__amador">
+      <div class="azul"></div>
+      <div class="input__branco"><span>{{ profissional }}</span></div>
+      <div class="azul"><span>Profissional</span></div>
+      <div class="input__branco">{{ amador }}</div>
+      <div class="azul"><span>Amador</span></div>
+    </div>
+    <div class="avatar">
+      <div class="avatar__foto">
+        <div class="carteirinha">
+          <img class="foto" src="/assets/images/avatarNull.png" alt="Foto da carteirinha">
+        </div>
+        <div class="azul__completo"></div>
+        <div class="azul__completo"></div>
+      </div>
+      <div class="avatar__input">
+        <div class="azul__completo"></div>
+        <div class="data">
+          <div class="data__box"><span>Data colonização</span></div>
+          <div class="data__input"><span>{{ dataColonia }}</span></div>
+        </div>
+        <div class="azul__completo"></div>
+        <div class="data">
+          <div class="data__box"><span>Data emissão</span></div>
+          <div class="data__input"><span>{{ dataEmissao }}</span></div>
+        </div>
+        <div class="azul__completo"></div>
+        <div class="azul__completo">Cédula de identificação</div>
+      </div>
+    </div>
+  </div>
+  <div class="dir">
+    <div class="azul__completo-pescador">
+      <span class="titulo">PESCADOR ARTEZANAL</span>
+    </div>
+    <div class="nome">
+      <div class="nome__box"><span>Filho de:</span></div>
+      <div class="nome__input"><span>{{ pais }}</span></div>
+    </div>
+    <div class="azul__completo"></div>
+    <div class="data__nasc">
+      <div class="dta__box"><span>Data nasc:</span></div>
+      <div class="est__input"><span>{{ dataNascimento }}</span></div>
+      <div class="est__box"><span>Estado civil:</span></div>
+      <div class="est__input"><span>{{ estadoCivil }}</span></div>
+    </div>
+    <div class="azul__completo"></div>
+    <div class="nome">
+      <div class="nome__box"><span>RG:</span></div>
+      <div class="nome__input"><span>{{ rg }}</span></div>
+    </div>
+    <div class="nome">
+      <div class="nome__box"><span>CPF:</span></div>
+      <div class="nome__input"><span>{{ cpf }}</span></div>
+    </div>
+    <div class="azul__completo"></div>
+    <div class="digital">
+      <div class="digital__esq">
+        <div class="nome">
+          <div class="cart__box"><span>Cart. Cap Nº</span></div>
+          <div class="cart__input"><span>{{ cartCap }}</span></div>
+        </div>
+        <div class="azul__completo"></div>
+        <div class="nome">
+          <div class="naturalidade__box"><span>Naturalidade:</span></div>
+          <div class="naturalidade__input"><span>{{ naturalidade }}</span></div>
+        </div>
+        <div class="assinatura"></div>
+        <div class="azul__completo">Assinatura do pescador</div>
+      </div>
+      <div class="digital__dir"><span>digital</span></div>
+    </div>
+  </div>
+</div>
+<div class="btn-gerarpdf">
+  <button mat-raised-button color="primary" class="botao" (click)="gerarPDF()">Gerar PDF</button>
+</div>
